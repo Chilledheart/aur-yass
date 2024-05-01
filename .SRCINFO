@@ -1,6 +1,6 @@
 pkgbase = yass-proxy
 	pkgdesc = lightweight http/socks proxy
-	pkgver = 1.9.2
+	pkgver = 1.9.3
 	pkgrel = 1
 	url = https://github.com/Chilledheart/yass
 	arch = x86_64
@@ -27,7 +27,7 @@ pkgbase = yass-proxy
 	optdepends = gtk-update-icon-cache
 	provides = yass-proxy
 	conflicts = yass-proxy-git
-	source = https://github.com/Chilledheart/yass/releases/download/1.9.2/yass-1.9.2.tar.bz2
-	sha256sums = 630f41801ee9290482a2db7a20907dc95b3da73e97f63196129ca8aa0d962579
+	source = https://github.com/Chilledheart/yass/releases/download/1.9.3/yass-1.9.3.tar.bz2
+	sha256sums = 3a544690769650e132539f494c5039b26b7f2267d57d500687dd54238be96e1f
 
 pkgname = yass-proxy
