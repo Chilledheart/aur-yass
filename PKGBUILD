@@ -17,8 +17,17 @@ checkdepends=(curl)
 provides=(yass-proxy)
 conflicts=(yass-proxy-git)
 source=("https://github.com/Chilledheart/yass/releases/download/${_pkgver}/yass-${_pkgver}.tar.zst"
+        "gtk4.patch"
         )
-sha256sums=('d3094a173078f70fde6f1a76fb4511873a6e232a8310ecad3138c4d5ad64152a')
+sha256sums=('d3094a173078f70fde6f1a76fb4511873a6e232a8310ecad3138c4d5ad64152a'
+            'e519c68fdb22f16ab98c27c9c9596613244b24ccc6041b47c9b1521f05d4429d')
+
+prepare(){
+  SRC_DIR="${srcdir}/yass-${_pkgver}"
+  pushd $SRC_DIR
+  patch -Np1 -i ../gtk4.patch
+  popd
+}
 
 build(){
   SRC_DIR="${srcdir}/yass-${_pkgver}"
